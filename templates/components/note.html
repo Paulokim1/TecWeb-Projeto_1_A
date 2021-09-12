@@ -1,0 +1,39 @@
+<div class="card">
+  <!-- Aqui esta o body do card mais a responsabilidade em realizar o UPDATE -->
+  <div class="card-body">
+    <form method = 'post' class = 'update'>
+      <!-- p/ eu poder identificar no request qual o id respectivo do card e poder adicionar no params -->
+      <input type="hidden" 
+      name="id" 
+      value="{card_id}"/>
+      <!-- p/ eu poder identificar no request qual a acao que eu quero fazer neste card -->
+      <input
+        type="hidden"
+        name="tipo_acao"
+        value="update"
+      />
+        <textarea name='titulo' class="card-title">{title}</textarea>
+        <textarea name='detalhes' class="card-content">{details}</textarea>
+        <button class="update-btn" type="submit">
+          <img src="https://img.icons8.com/fluency/48/000000/edit.png" class="update-btn-image"/>
+        </button>
+    </form>
+
+    <!-- Essa parte esta responsavel em realizar o DELETE -->
+    <form method = "post" class="delete">
+      <!-- p/ eu poder identificar no request qual o id respectivo do card e poder adicionar no params -->
+      <input type="hidden" 
+      name="id" 
+      value="{card_id}"/>
+      <!-- p/ eu poder identificar no request qual a acao que eu quero fazer neste card -->
+      <input
+        type="hidden"
+        name="tipo_acao"
+        value="delete"
+      />
+      <button class="delete-btn" type="submit">
+        <img src="https://img.icons8.com/fluency/48/000000/delete-sign.png" class="delete-btn-image"/>
+      </button>
+    </form>
+  </div>
+</div>
